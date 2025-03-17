@@ -33,4 +33,4 @@ export const userFormSchema = z
 
 export type UserFormSchema = z.infer<typeof userFormSchema>;
   
-export type FormErrors=Partial<Record<keyof UserForm,string[]>>
+export type FormErrors=Partial<Record<keyof UserFormSchema,string[]>>

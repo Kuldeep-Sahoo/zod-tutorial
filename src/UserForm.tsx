@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { FormErrors, userFormSchema, UserFormSchema } from "./types/userForm";
-import { MessageCircleWarning, OctagonAlert } from "lucide-react";
+import { OctagonAlert } from "lucide-react";
 
 // type UserFormType = {
 //   name: string;
