@@ -30,7 +30,8 @@ const UserForm = () => {
     const { name, value } = e.target;
     setformData({
       ...formData,
-      [name]: name === "age" ? (value ? Number(value) : 0) : value,
+      [name]:
+        name === "age" || name == "phone" ? (value ? Number(value) : 0) : value,
     });
     setError((prev) => ({
       ...prev,
@@ -65,7 +66,7 @@ const UserForm = () => {
         />
         {error.name && (
           <span className="text-red-500 text-sm flex gap-2 items-center mt-2">
-             <OctagonAlert size={20}/> 
+            <OctagonAlert size={20} />
             {error.name[0]}
           </span>
         )}
@@ -82,7 +83,7 @@ const UserForm = () => {
         />
         {error.email && (
           <span className="text-red-500 text-sm flex gap-2 items-center mt-2">
-             <OctagonAlert size={20}/> 
+            <OctagonAlert size={20} />
             {error.email[0]}
           </span>
         )}
@@ -117,7 +118,7 @@ const UserForm = () => {
         />
         {error.password && (
           <span className="text-red-500 text-sm flex gap-2 items-center mt-2">
-             <OctagonAlert size={20}/> 
+            <OctagonAlert size={20} />
             {error.password[0]}
           </span>
         )}
@@ -134,7 +135,7 @@ const UserForm = () => {
         />
         {error.confirmPassword && (
           <span className="text-red-500 text-sm flex gap-2 items-center mt-2">
-             <OctagonAlert size={20}/> 
+            <OctagonAlert size={20} />
             {error.confirmPassword[0]}
           </span>
         )}
@@ -151,7 +152,7 @@ const UserForm = () => {
         />
         {error.phone && (
           <span className="text-red-500 text-sm flex gap-2 items-center mt-2">
-             <OctagonAlert size={20}/> 
+            <OctagonAlert size={20} />
             {error.phone[0]}
           </span>
         )}
@@ -171,7 +172,7 @@ const UserForm = () => {
         </select>
         {error.gender && (
           <span className="text-red-500 text-sm flex gap-2 items-center mt-2">
-             <OctagonAlert size={20}/> 
+            <OctagonAlert size={20} />
             {error.gender[0]}
           </span>
         )}
